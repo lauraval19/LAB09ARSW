@@ -6,14 +6,14 @@
 ### Dependencias
 * Cree una cuenta gratuita dentro de Azure. Para hacerlo puede guiarse de esta [documentación](https://azure.microsoft.com/es-es/free/students/). Al hacerlo usted contará con $100 USD para gastar durante 12 meses.
 
-### Parte 0 - Entendiendo el escenario de calidad
+### :white_check_mark: Parte 0 - Entendiendo el escenario de calidad
 
 Adjunto a este laboratorio usted podrá encontrar una aplicación totalmente desarrollada que tiene como objetivo calcular el enésimo valor de la secuencia de Fibonnaci.
 
 **Escalabilidad**
 Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000) de la secuencia de Fibonacci de forma concurrente y el sistema se encuentra bajo condiciones normales de operación, todas las peticiones deben ser respondidas y el consumo de CPU del sistema no puede superar el 70%.
 
-### Parte 1 - Escalabilidad vertical
+### :white_check_mark: Parte 1 - Escalabilidad vertical
 
 1. Diríjase a el [Portal de Azure](https://portal.azure.com/) y a continuación cree una maquina virtual con las características básicas descritas en la imágen 1 y que corresponden a las siguientes:
     * Resource Group = SCALABILITY_LAB
@@ -27,7 +27,9 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 2. Para conectarse a la VM use el siguiente comando, donde las `x` las debe remplazar por la IP de su propia VM (Revise la sección "Connect" de la virtual machine creada para tener una guía más detallada).
 
-    `ssh scalability_lab@xxx.xxx.xxx.xxx`
+    `ssh -i ~/Downloads/VERTICAL_LAB_KEY.pem scalability_lab@20.232.117.34`
+    
+![Imágen 1](images/part1/commandconnectvm.png)
 
 3. Instale node, para ello siga la sección *Installing Node.js and npm using NVM* que encontrará en este [enlace](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/).
 4. Para instalar la aplicación adjunta al Laboratorio, suba la carpeta `FibonacciApp` a un repositorio al cual tenga acceso y ejecute estos comandos dentro de la VM:
